@@ -3177,17 +3177,17 @@ PrefabInstance:
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.881464
+      value: 24.040829
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 22.573322
+      value: 25.988665
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 18.552162
+      value: 21.359104
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
@@ -4932,6 +4932,7 @@ MonoBehaviour:
   - {fileID: 305417475}
   - {fileID: 871415223}
   walls: []
+  edgeTile: []
 --- !u!1001 &1815426775
 PrefabInstance:
   m_ObjectHideFlags: 0

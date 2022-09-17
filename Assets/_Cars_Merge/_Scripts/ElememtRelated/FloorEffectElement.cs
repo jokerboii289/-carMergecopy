@@ -10,26 +10,27 @@ namespace _Cars_Merge._Scripts.ElementRelated
     public class FloorEffectElement : MonoBehaviour
     {
         public static FloorEffectElement instance;
-        
+
         public List<Transform> tiles;  //no of tiles
         public List<Transform> arrows;
         public List<Transform> walls;
 
         public List<Transform> edgeTile;//list of edge tiles
- 
+        
+
         private void Awake()
         {
             instance = this;
             MainController.GameStateChanged += CheckEdgeTilesOccupied;
         }
-       
+
 
         private void Start()
         {
             StartCoroutine(TileEffect());
         }
 
-        
+
         IEnumerator TileEffect()
         {
             for (int i = 0; i < walls.Count; i++)
@@ -46,13 +47,13 @@ namespace _Cars_Merge._Scripts.ElementRelated
             for (int i = 0; i < arrows.Count; i++)
             {
                 Vector3 origAngle = arrows[i].transform.eulerAngles;
-                arrows[i].transform.DORotate(new Vector3(origAngle.x, origAngle.y+ 180, origAngle.z), 0.25f).From();
+                arrows[i].transform.DORotate(new Vector3(origAngle.x, origAngle.y + 180, origAngle.z), 0.25f).From();
             }
         }
 
         void CheckEdgeTilesOccupied(GameState newState, GameState oldState)
         {
-            StartCoroutine(Delay(newState,oldState));
+            StartCoroutine(Delay(newState, oldState));
         }
         IEnumerator Delay(GameState newState, GameState oldState)
         {
@@ -70,9 +71,8 @@ namespace _Cars_Merge._Scripts.ElementRelated
                 }
                 if (possibleArrow == edgeTile.Count)
                 {
-                    //loose panel;
                     yield return new WaitForSeconds(1);
-                    MainController.instance.SetActionType(GameState.Levelfail);
+                    MainController.instance.SetActionType(GameState.Levelfail); //loose panel;
                 }
             }
         }
@@ -81,5 +81,5 @@ namespace _Cars_Merge._Scripts.ElementRelated
         {
             MainController.GameStateChanged -= CheckEdgeTilesOccupied;
         }
-    }   
+    }
 }

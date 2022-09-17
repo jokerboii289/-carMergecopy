@@ -1881,6 +1881,7 @@ MonoBehaviour:
   walls:
   - {fileID: 929581100}
   - {fileID: 755296901}
+  edgeTile: []
 --- !u!1 &1927620056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2360,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7838226646858864548, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 7838226646887878922, guid: 0165d31c9278e2d4b871ab39322a3574,
         type: 3}
       propertyPath: difficulty
@@ -2433,6 +2439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VIEW
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838226647154311174, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7838226647154311177, guid: 0165d31c9278e2d4b871ab39322a3574,
         type: 3}

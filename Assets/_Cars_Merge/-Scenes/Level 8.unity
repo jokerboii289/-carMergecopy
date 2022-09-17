@@ -4382,7 +4382,7 @@ PrefabInstance:
     - target: {fileID: 5487186293570807567, guid: 067ebd04f9c2ee34cbb98cb13fa492de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.01
+      value: -3.95
       objectReference: {fileID: 0}
     - target: {fileID: 5487186293570807567, guid: 067ebd04f9c2ee34cbb98cb13fa492de,
         type: 3}
@@ -4392,7 +4392,7 @@ PrefabInstance:
     - target: {fileID: 5487186293570807567, guid: 067ebd04f9c2ee34cbb98cb13fa492de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.002
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5487186293570807567, guid: 067ebd04f9c2ee34cbb98cb13fa492de,
         type: 3}
@@ -4932,6 +4932,7 @@ MonoBehaviour:
   - {fileID: 305417475}
   - {fileID: 871415223}
   walls: []
+  edgeTile: []
 --- !u!1001 &1815426775
 PrefabInstance:
   m_ObjectHideFlags: 0

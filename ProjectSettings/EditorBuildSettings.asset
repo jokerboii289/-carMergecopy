@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/firstScene.unity
+    guid: b2e953672968578449f73bb17936db4e
+  - enabled: 1
     path: Assets/_Cars_Merge/-Scenes/Level 1.unity
     guid: 50d2131ea306c0a448f7bcd1a3ef8377
   - enabled: 1
@@ -35,4 +38,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Cars_Merge/-Scenes/Level 10.unity
     guid: 4bb82a1ad9de78c44ac02d77359e5bc7
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 11.unity
+    guid: 19c6e6b37a9d85647b0c2dac68a59d7c
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 12.unity
+    guid: 08497e04ad3a6d54681d3efdaf7b8270
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 13.unity
+    guid: e6b5d68d392492e42a9648814859eb31
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 14.unity
+    guid: 192e4d12c3e161047a94d768392baf14
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 15.unity
+    guid: 35b09e92910692445aa5bbe614031316
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 16.unity
+    guid: 9d8da494db9ab1c4681571b27d9769cd
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 17.unity
+    guid: 26f4ea94fd35d1f44a0fa1baac771593
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 18.unity
+    guid: 8d5ab093c12dea7418bd3359728adee6
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 19.unity
+    guid: 8f99f25012c9678448a2fafd53597410
+  - enabled: 1
+    path: Assets/_Cars_Merge/-Scenes/Level 20.unity
+    guid: 52fda1eee183a4143b3e94106a559699
   m_configObjects: {}

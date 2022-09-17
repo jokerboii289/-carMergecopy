@@ -4932,6 +4932,7 @@ MonoBehaviour:
   - {fileID: 305417475}
   - {fileID: 871415223}
   walls: []
+  edgeTile: []
 --- !u!1001 &1815426775
 PrefabInstance:
   m_ObjectHideFlags: 0

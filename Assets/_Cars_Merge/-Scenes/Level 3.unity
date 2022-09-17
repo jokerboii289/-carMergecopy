@@ -3004,6 +3004,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7838226646858864548, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 7838226646887878922, guid: 0165d31c9278e2d4b871ab39322a3574,
         type: 3}
       propertyPath: difficulty

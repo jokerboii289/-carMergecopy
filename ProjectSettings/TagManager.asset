@@ -8,6 +8,7 @@ TagManager:
   - wall
   - FxTemporaire
   - tile
+  - ambulance
   layers:
   - Default
   - TransparentFX

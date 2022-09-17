@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using _Cars_Merge._Scripts.Ambulance;
+//using _Cars_Merge._Scripts.Ambulance;
 using _Cars_Merge._Scripts.ControllerRelated;
 using _Draw_Copy._Scripts.ControllerRelated;
 using DG.Tweening;
@@ -17,8 +17,10 @@ namespace _Cars_Merge._Scripts.ElementRelated
 
         private CarElement _carElement;
 
+        private int counter;
         private void Start()
         {
+            counter = 0;
             _rb = GetComponent<Rigidbody>();
             _carElement = GetComponent<CarElement>();
             _moveDir = CarsController.instance.dir;
@@ -29,25 +31,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
             _rb.position += transform.forward * moveSpeed * Time.fixedDeltaTime;
         }
 
-        private void Update()
-        {
-            //front raycast
-            /*RaycastHit frontHit;
-            Physics.Raycast(transform.position, transform.forward, out frontHit, 3.5f);
-
-            Debug.DrawRay(transform.position, transform.forward * 3.5f, Color.magenta);
-
-            RaycastHit rightHit;
-            Physics.Raycast(transform.position, transform.right, out rightHit, 3.5f);
-
-            Debug.DrawRay(transform.position, transform.right * 3.5f, Color.magenta);
-
-            RaycastHit lefttHit;
-            Physics.Raycast(transform.position, -transform.right, out rightHit, 3.5f);
-
-            Debug.DrawRay(transform.position, -transform.right * 3.5f, Color.magenta);*/
-        }
-
+      
         private void OnTriggerEnter(Collider other)
         {
             _carElement.engineSmoke.SetActive(false);
@@ -88,35 +72,17 @@ namespace _Cars_Merge._Scripts.ElementRelated
             }
             else if (other.gameObject.CompareTag("Finish"))
             {
-                MainController.instance.SetActionType(GameState.Input);
+                AmbulanceController.instance.InputModifier();
             }
-
-            /*if (_carElement.num != other.gameObject.GetComponent<CarElement>().num && gameObject.layer != 3)
+            else if (other.gameObject.name.Contains("Ambulance") && gameObject.layer != 3)
             {
                 moveSpeed = 0;
                 _rb.isKinematic = true;
-                MainController.instance.SetActionType(GameState.Input);
                 gameObject.layer = 3;
+                MainController.instance.SetActionType(GameState.Input);
                 PlayCrashEffect();
             }
-            else if (_carElement.num == other.gameObject.GetComponent<CarElement>().num && other.gameObject.layer == 3)
-                Merge(other.gameObject);
 
-            if (other.gameObject.CompareTag("wall") && gameObject.layer != 3)
-            {
-                moveSpeed = 0;
-                _rb.isKinematic = true;
-                MainController.instance.SetActionType(GameState.Input);
-                gameObject.layer = 3;
-                PlayCrashEffect();
-                _carElement.engineSmoke.SetActive(false);
-
-                Vector3 origWallRot = other.transform.eulerAngles;
-                other.transform.DOLocalRotate(new Vector3(15, origWallRot.y, origWallRot.z), 0.25f).OnComplete(() =>
-                {
-                    other.transform.DOLocalRotate(new Vector3(0, origWallRot.y, origWallRot.z), 0.25f);
-                });
-            }*/
         }
 
         void Merge(GameObject otherCar)

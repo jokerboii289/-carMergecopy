@@ -5,8 +5,9 @@ using _Cars_Merge._Scripts.ControllerRelated;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using Random = System.Random;
 using UnityEngine.SceneManagement;
+using Random = System.Random;
+
 
 namespace _Draw_Copy._Scripts.ControllerRelated
 {
@@ -18,6 +19,8 @@ namespace _Draw_Copy._Scripts.ControllerRelated
         public GameObject winPanel, failPanel;
         public TextMeshProUGUI levelNumText;
         public GameObject winConfetti;
+        [Header("BG music")]
+        public GameObject bgMusic;
 
         private void Awake()
         {
@@ -26,7 +29,8 @@ namespace _Draw_Copy._Scripts.ControllerRelated
 
         private void Start()
         {
-            //levelNumText.text = "Lv. " + PlayerPrefs.GetInt("levelnumber", 1);
+            levelNumText.text = "Lv. " + PlayerPrefs.GetInt("levelnumber", 1);
+            bgMusic.SetActive(true);
         }
 
         private void OnEnable()
@@ -49,6 +53,7 @@ namespace _Draw_Copy._Scripts.ControllerRelated
                 HUD.SetActive(false);
                 failPanel.SetActive(true);
                 SoundsController.instance.PlaySound(SoundsController.instance.fail);
+                bgMusic.SetActive(false);
             }
         }
 
@@ -61,12 +66,28 @@ namespace _Draw_Copy._Scripts.ControllerRelated
             yield return new WaitForSeconds(1.5f);
             winPanel.SetActive(true);
             SoundsController.instance.PlaySound(SoundsController.instance.win);
-            Invoke("NextLevel",1);
+            bgMusic.SetActive(false);
         }
 
-        void NextLevel()
+        public void Nextlvl()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (PlayerPrefs.GetInt("level", 1) >= SceneManager.sceneCountInBuildSettings - 1)
+            {
+                SceneManager.LoadScene(UnityEngine.Random.Range(0, SceneManager.sceneCountInBuildSettings - 1));
+                PlayerPrefs.SetInt("level", (PlayerPrefs.GetInt("level", 1) + 1));
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                PlayerPrefs.SetInt("level", (PlayerPrefs.GetInt("level", 1) + 1));
+            }
+            PlayerPrefs.SetInt("levelnumber", PlayerPrefs.GetInt("levelnumber", 1) + 1);
+
+        }
+
+        public void Reload()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }  
 }

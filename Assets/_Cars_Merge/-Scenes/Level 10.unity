@@ -4932,6 +4932,7 @@ MonoBehaviour:
   - {fileID: 305417475}
   - {fileID: 871415223}
   walls: []
+  edgeTile: []
 --- !u!1001 &1815426775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5697,6 +5698,28 @@ PrefabInstance:
       propertyPath: targetCarNum
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7838226646887878922, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: cars.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838226646887878922, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: cars.Array.data[6]
+      value: 
+      objectReference: {fileID: 727310204520259864, guid: d6e112cb1bf4178459c396037eb6ff74,
+        type: 3}
+    - target: {fileID: 7838226646887878922, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: carSprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838226646887878922, guid: 0165d31c9278e2d4b871ab39322a3574,
+        type: 3}
+      propertyPath: carSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8200f5db00a7f444790a5a7e76871d37,
+        type: 3}
     - target: {fileID: 7838226646887878924, guid: 0165d31c9278e2d4b871ab39322a3574,
         type: 3}
       propertyPath: arrows.Array.data[0]

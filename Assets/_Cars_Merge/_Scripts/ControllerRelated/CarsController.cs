@@ -14,17 +14,17 @@ namespace _Cars_Merge._Scripts.ControllerRelated
     public class CarsController : MonoBehaviour
     {
         public static CarsController instance;
-        
+
         public List<GameObject> cars;
         public List<Sprite> carSprites;
         [Range(1, 5)] public int difficulty;
         public Image nextCarImg, targetCarImg;
-        
+
         [HideInInspector] public Vector3 dir;
 
         [HideInInspector] public GameObject currentCar;
-        public TextMeshProUGUI targetNumText, nextCarNumText,noOfTargetCar;
-        
+        public TextMeshProUGUI targetNumText, nextCarNumText, noOfTargetCar;
+
         public Dictionary<int, GameObject> carNumPair = new Dictionary<int, GameObject>();
         public Dictionary<int, Sprite> carImgPair = new Dictionary<int, Sprite>();
         public int targetCarNum;
@@ -53,9 +53,13 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             SetCarInUI();
             targetNumText.text = targetCarNum.ToString();
             targetCarImg.sprite = carImgPair[targetCarNum];
-            noOfTargetCar.text = " "+ noOfCarToWin.ToString();
+            if (noOfCarToWin > 1)
+                noOfTargetCar.text = " " + noOfCarToWin.ToString();
+            else
+                noOfTargetCar.text = " ".ToString();
+
         }
-        
+
         //By arrow click
         public void SpawnCar(Transform refObj)
         {
@@ -75,18 +79,18 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         }
         public void SetupMergedCar(Transform collidingCar, Transform targetCar, int num)
         {
-            if(num > 64) return;
+            if (num > 64) return;
             dir = targetCar.forward;
 
             CarElement carElement = targetCar.GetComponent<CarElement>();
             Vector3 tilePos = carElement.tileOccupied.position;
-            
+
             //calculating spawn rotation
             Vector3 spawnDir = targetCar.GetComponent<CarElement>().tileOccupied.position - collidingCar.GetComponent<CarElement>().tileOccupied.position;
             Vector3 spawnAngle = new Vector3();
-            if(spawnDir.z == 0) spawnAngle = Vector3.up * 90;
-            else if(spawnAngle.x == 0) spawnAngle = Vector3.zero;
-            
+            if (spawnDir.z == 0) spawnAngle = Vector3.up * 90;
+            else if (spawnAngle.x == 0) spawnAngle = Vector3.zero;
+
             GameObject newcar = Instantiate(carNumPair[num], new Vector3(tilePos.x, targetCar.position.y, tilePos.z), Quaternion.Euler(spawnAngle));
             newcar.GetComponent<Collider>().enabled = false;
             newcar.GetComponent<CarMovementElement>().enabled = false;
@@ -107,9 +111,11 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             if (newcar.GetComponent<CarElement>().num == targetCarNum)  //car win condition
             {
                 counter++;
-                noOfTargetCar.text = " " +( noOfCarToWin-counter).ToString();
-                if (counter==noOfCarToWin)
-                 StartCoroutine(TargetCarFx(newcar));
+                if (noOfCarToWin > 1)
+                    noOfTargetCar.text = " " + (noOfCarToWin - counter).ToString();
+    
+                if (counter == noOfCarToWin)
+                    StartCoroutine(TargetCarFx(newcar));
             }
         }
         public GameObject GetCurrentCar()
@@ -129,8 +135,8 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             sequence.Append(finalCarMat.DOColor(origColor, 0.5f));
             sequence.Append(finalCarMat.DOColor(Color.gray, 0.5f));
             sequence.Append(finalCarMat.DOColor(origColor, 0.5f));
-                
-            MainController.instance.SetActionType(GameState.Levelwin);   
+
+            MainController.instance.SetActionType(GameState.Levelwin);
         }
-    }   
+    }
 }
