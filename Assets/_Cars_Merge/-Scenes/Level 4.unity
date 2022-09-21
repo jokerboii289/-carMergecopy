@@ -745,13 +745,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: -0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 5.45, y: 37.9, z: 5.51}
+  m_LocalRotation: {x: 0.43586925, y: 0.3374179, z: -0.18054295, w: 0.8145989}
+  m_LocalPosition: {x: -9.1, y: 35.1, z: -9.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 56.3, y: 45, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1842,18 +1842,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13.96928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15.101098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12.411024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.15
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.27
+      value: 14.59
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.7
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}

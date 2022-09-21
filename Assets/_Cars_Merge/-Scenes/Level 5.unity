@@ -477,13 +477,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: -0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 4.05, y: 47.74, z: 3.73}
+  m_LocalRotation: {x: 0.3891027, y: 0.34708834, z: -0.1611716, w: 0.8379454}
+  m_LocalPosition: {x: -16.7, y: 41.4, z: -16.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.816, y: 45, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2457,32 +2457,32 @@ PrefabInstance:
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 18.388302
+      value: 23.584257
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 19.87816
+      value: 25.495104
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 16.337109
+      value: 20.953463
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.45
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.17
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.24
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 1605786113080894437, guid: 2f3721cf300758f418de1bdac22766ab,
         type: 3}

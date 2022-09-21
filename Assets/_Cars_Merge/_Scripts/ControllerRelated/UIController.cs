@@ -51,7 +51,7 @@ namespace _Draw_Copy._Scripts.ControllerRelated
             if (newState == GameState.Levelfail)
             {
                 HUD.SetActive(false);
-                failPanel.SetActive(true);
+                //failPanel.SetActive(true);
                 SoundsController.instance.PlaySound(SoundsController.instance.fail);
                 bgMusic.SetActive(false);
             }
